@@ -86,15 +86,10 @@ def runner
   # code runner here
   welcome 
   cards = initial_round
-  prompt_user
-  get_user_input
-  
-  hit?(cards)
-  display_card_total(cards)
-  # until cards > 21
-  # hit?(cards)
-  # end
+  until cards > 21
+   cards = hit?(cards)
+   display_card_total(cards)
+  end
   end_game(cards)
-  display_card_total(cards)
 end
     
